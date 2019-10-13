@@ -1,0 +1,26 @@
+<?php
+
+echo"
+    <h2>Lista de cosas que he aprendido con esta practica.</h2>
+    <ol>
+        <li>Crear una base de datos en php</li>
+        <li>Usar base de datos</li>
+        <li>Crear tablas</li>
+        <li>Insertar datos en tablas</li>
+        <li>Hacer un select en php</li>
+        <li>Mostrar por paginas los resultados de una consulta</li>
+        <li>Usar un fforeach</li>
+        <li>Conectar una base de datos</li>
+        <li>Poner una llave primaria en php</li>
+    </ol>
+    <h2>Nota del documento y la del profesor.</h2>
+    <p>La nota del documento un 6 y para el profesor un 6.</p>
+    <h2>Mi nota como alumno seria.</h2>
+    <p>7.</p>    
+    <h2>Mejora para la practica.</h2>
+    <p>El ultimo documento en el que se debia de hacer la paginación esta todo mal y no funciona nada.</p>
+    "
+    ?>
+
+
+
