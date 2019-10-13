@@ -1,0 +1,50 @@
+<?php
+//connect to MySQL
+$db = mysqli_connect('localhost', 'root') or 
+    die ('Unable to connect. Check your connection parameters.');
+
+//create the main database if it doesn't already exist
+$query = 'CREATE DATABASE IF NOT EXISTS mimusica';
+mysqli_query($db,$query) or die(mysqli_error($db));
+
+//make sure our recently created database is the active one
+mysqli_select_db($db,'mimusica') or die(mysqli_error($db));
+
+//create the movie table
+$query = 'CREATE TABLE music (
+        music_id        INTEGER UNSIGNED  NOT NULL AUTO_INCREMENT, 
+        music_nombre      VARCHAR(255)      NOT NULL, 
+        musica_tipo      TINYINT           NOT NULL DEFAULT 0, 
+        musica_anio      SMALLINT UNSIGNED NOT NULL DEFAULT 0, 
+        musica_cantante INTEGER UNSIGNED  NOT NULL DEFAULT 0, 
+        music_productor  INTEGER UNSIGNED  NOT NULL DEFAULT 0, 
+
+        PRIMARY KEY (music_id),
+        KEY musica_tipo (musica_tipo, musica_anio) 
+    ) 
+    ENGINE=MyISAM';
+mysqli_query($db,$query) or die (mysqli_error($db));
+
+//create the movietype table
+$query = 'CREATE TABLE tiposmusica ( 
+        musictipo_id    TINYINT UNSIGNED NOT NULL AUTO_INCREMENT, 
+        musictipo_label VARCHAR(100)     NOT NULL, 
+        PRIMARY KEY (musictipo_id) 
+    ) 
+    ENGINE=MyISAM';
+mysqli_query($db,$query) or die(mysqli_error($db));
+
+//create the people table
+$query = 'CREATE TABLE persona ( 
+        persona_id         INTEGER UNSIGNED    NOT NULL AUTO_INCREMENT, 
+        persona_nomComple   VARCHAR(255)        NOT NULL, 
+        persona_pais    TINYINT(1) UNSIGNED NOT NULL DEFAULT 0, 
+        persona_productor TINYINT(1) UNSIGNED NOT NULL DEFAULT 0, 
+
+        PRIMARY KEY (persona_id)
+    ) 
+    ENGINE=MyISAM';
+mysqli_query($db,$query) or die(mysqli_error($db));
+
+echo 'Music database successfully created!';
+?>
