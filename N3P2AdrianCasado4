@@ -46,9 +46,9 @@ $link = new PDO('mysql:host=localhost;dbname=mimusica', 'root', ''); // el campo
 </table>
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="http://node23.codenvy.io:44136//UF1-NF3-PAC02-PHP-i-MySQL/N3P2AdrianCasado5.php">1</a></li>
-    <li class="page-item"><a class="page-link" href="http://node23.codenvy.io:44136//UF1-NF3-PAC02-PHP-i-MySQL/N3P2AdrianCasado6.php">2</a></li>
-    <li class="page-item"><a class="page-link" href="http://node23.codenvy.io:44136//UF1-NF3-PAC02-PHP-i-MySQL/N3P2AdrianCasado7.php">3</a></li>
+   <li class="page-item"><a class="page-link" href="http://node23.codenvy.io:45293//UF1-NF3-PAC02-PHP-i-MySQL/N3P2AdrianCasado3.php">1</a></li>
+    <li class="page-item"><a class="page-link" href="http://node23.codenvy.io:45293//UF1-NF3-PAC02-PHP-i-MySQL/N3P2AdrianCasado5.php">2</a></li>
+    <li class="page-item"><a class="page-link" href="http://node23.codenvy.io:45293//UF1-NF3-PAC02-PHP-i-MySQL/N3P2AdrianCasado6.php">3</a></li>
   </ul>
 </nav>
 </body>
